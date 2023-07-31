@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:n4sch="neo4j://graph.schema#"
+	xmlns:n4ind="neo4j://graph.individuals#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79976">
+	<n4sch:prewave_link>https://www.prewave.com/network/target/7346639</n4sch:prewave_link>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79829">
+	<n4sch:nation_capEN>JAPAN</n4sch:nation_capEN>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79976">
+	<n4sch:prewave_id>7346639</n4sch:prewave_id>
+	<n4sch:bp_name>(株)登米村田製作所</n4sch:bp_name>
+	<n4sch:upper_name>(株)登米村田製作所</n4sch:upper_name>
+	<n4sch:bp_id>unknown</n4sch:bp_id>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79829">
+	<n4sch:iso3>JPN</n4sch:iso3>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79976">
+	<rdf:type rdf:resource="neo4j://graph.schema#Supplier"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79829">
+	<n4sch:iso2>JP</n4sch:iso2>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79976">
+	<n4sch:name>(株)登米村田製作所</n4sch:name>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79829">
+	<rdf:type rdf:resource="neo4j://graph.schema#Country"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79976">
+	<n4sch:LOCATED_IN rdf:resource="neo4j://graph.individuals#79829"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79829">
+	<n4sch:nation_en>Japan</n4sch:nation_en>
+	<n4sch:sustainability_risk rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.585</n4sch:sustainability_risk>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79976">
+	<rdf:type rdf:resource="neo4j://graph.schema#BusinessPartner"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79829">
+	<n4sch:nation_de>Japan</n4sch:nation_de>
+	<n4sch:country_risk rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.706</n4sch:country_risk>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79978">
+	<rdf:type rdf:resource="neo4j://graph.schema#Supplier"/>
+	<n4sch:upper_name>1425 STOKKE PKWY #3M</n4sch:upper_name>
+</rdf:Description>
+
+<rdf:Description rdf:about="neo4j://graph.individuals#79955">
+	<n4sch:sustainability_risk rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.221</n4sch:sustainability_risk>
+	<n4sch:nation_de>Vereinigte Staaten von Amerika</n4sch:nation_de>
+</rdf:Description>
+</rdf:RDF>

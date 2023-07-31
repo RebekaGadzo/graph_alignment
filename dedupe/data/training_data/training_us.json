@@ -1,0 +1,56 @@
+{
+    "distinct": [
+        [
+            {
+                "index": "24866",
+                "Company": "disco corporation (santa clara trailer village)",
+                "Country": "us",
+                "Parsed_Company": "disco",
+                "Location": "santa clara trailer village",
+                "Company_Category": "co",
+                "long": null,
+                "lat": null,
+                "lat_long": null
+            },
+            {
+                "company": "https://data.coypu.org/company/gleif/2549006ssu21mq19ag55",
+                "Company": "discovery tn, llc",
+                "Country": "us",
+                "city": "dover",
+                "Parsed_Company": "discovery tn",
+                "Location": "dover",
+                "Company_Category": "llc",
+                "long": "-75.5243682",
+                "lat": "39.158168",
+                "lat_long": "39.2 -75.5"
+            }
+        ]
+    ],
+    "match": [
+        [
+            {
+                "index": "25230",
+                "Company": "kauffman engineering inc. (lebanon)",
+                "Country": "us",
+                "Parsed_Company": "kauffman engineering",
+                "Location": "lebanon",
+                "Company_Category": "inc",
+                "long": "-76.4626118",
+                "lat": "40.375713",
+                "lat_long": "40.4 -76.5"
+            },
+            {
+                "company": "https://data.coypu.org/company/gleif/5493003inmaomfsmsn36",
+                "Company": "kauffman engineering inc",
+                "Country": "us",
+                "city": "lebanon",
+                "Parsed_Company": "kauffman engineering inc",
+                "Location": "lebanon",
+                "Company_Category": "inc",
+                "long": "-76.4626118",
+                "lat": "40.375713",
+                "lat_long": "40.4 -76.5"
+            }
+        ]
+    ]
+}

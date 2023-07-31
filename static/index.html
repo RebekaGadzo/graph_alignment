@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditto Company Matcher</title>
+
+    <link rel="stylesheet" href="./material-design/material.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./material-design/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./material-design/getmdl-select.min.css">
+    <script defer src="./material-design/getmdl-select.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+
+<body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span id="title" class="mdl-layout-title">Ditto Company Matcher</span>
+                <div class="spacer">
+                </div>
+                <label id="mode-switch" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                    <input type="checkbox" id="switch-1" class="mdl-switch__input">
+                    <span class="mdl-switch__label"> Switch Matcher</span>
+                </label>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+
+                <div class="form-wrapper">
+                    <form id="match-form">
+
+                        <div class="form-row">
+                            <div class="mdl-textfield mdl-js-textfield getmdl-select mdl-textfield--floating-label">
+                                <input type="text" value="Germany" class="mdl-textfield__input" id="country" readonly>
+                                <input type="hidden" id="country-selector" value="DE" name="country">
+                                <label for="country" class="mdl-textfield__label">Country</label>
+                                <ul for="country" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                    <li class="mdl-menu__item" id="default-country" data-val="DE">Germany</li>
+                                    <li class="mdl-menu__item" data-val="US">United States</li>
+                                    <li class="mdl-menu__item" data-val="CN">China</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div id="name-scm" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="company-name-1">
+                                <label class="mdl-textfield__label" for="company-name-1">Company Name 1*</label>
+                            </div>
+                            <div id="latitude-scm" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                    id="latitude-1">
+                                <label class="mdl-textfield__label" for="latitude-1">Latitude 1</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <div id="longitude-scm"
+                                class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                    id="longitude-1">
+                                <label class="mdl-textfield__label" for="longitude-1">Longitude 1</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <button id="select-location-scm" type="button" class="mdl-button">Select</button>
+                        </div>
+
+                        <div class="form-row">
+                            <div id="name-coypu" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="company-name-2">
+                                <label class="mdl-textfield__label" for="company-name-2">Company Name 2*</label>
+                            </div>
+                            <div id="latitude-coypu"
+                                class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                    id="latitude-2">
+                                <label class="mdl-textfield__label" for="latitude-2">Latitude 2</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <div id="longitude-coypu"
+                                class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                    id="longitude-2">
+                                <label class="mdl-textfield__label" for="longitude-2">Longitude 2</label>
+                                <span class="mdl-textfield__error">Input is not a number!</span>
+                            </div>
+                            <button id="select-location-coypu" type="button" class="mdl-button">Select</button>
+                        </div>
+
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                            MATCH
+                        </button>
+                    </form>
+                </div>
+
+
+                <div id="match" class="match">
+                    <div id="result" class="result"></div>
+                    <div class="confidence">
+                        <div id="confidence-bar" class="mdl-progress mdl-js-progress"></div>
+                        <span id="confidence-score"></span>
+                    </div>
+                </div>
+
+                <div class="loading-overlay" id="loading-overlay">
+                    <div class="mdl-spinner mdl-js-spinner is-active"></div>
+                    <span>MATCHING COMPANIES</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <body>
+        <button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>
+        <dialog class="mdl-dialog">
+            <h4 class="mdl-dialog__title">Select Location</h4>
+            <div class="mdl-dialog__content">
+                <img id="map" draggable="false" src="#">
+            </div>
+            <div class="mdl-dialog__actions">
+                <button type="button" class="mdl-button close">Close</button>
+            </div>
+        </dialog>
+    </body>
+</body>
+
+<script>
+    const form = document.querySelector('#match-form');
+
+    const countrySelector = document.querySelector('#country-selector');
+    const loadingOverlay = document.querySelector('#loading-overlay');
+
+    const confidenceBar = document.querySelector('#confidence-bar');
+    const confidenceScore = document.querySelector('#confidence-score');
+    const pageTitle = document.querySelector('#title');
+    const match = document.querySelector('#match');
+    const result = document.querySelector('#result');
+
+    function isChatGpt() {
+        return document.body.classList.contains('chat-gpt');
+    }
+
+    // Select the country from the dropdown
+    setTimeout(() => {
+        document.querySelector('#mode-switch').MaterialSwitch.inputElement_.onclick = ev => {
+            if (isChatGpt()) {
+                document.body.classList.remove('chat-gpt');
+                pageTitle.innerText = 'Ditto Company Matcher';
+                document.title = 'Ditto Company Matcher';
+            } else {
+                document.body.classList.add('chat-gpt');
+                pageTitle.innerText = 'GPT Company Matcher';
+                document.title = 'GPT Company Matcher';
+            }
+        };
+
+
+        const defaultCountry = document.querySelector('#default-country');
+        defaultCountry.click();
+    }, 100);
+
+    form.addEventListener('submit', ev => {
+        ev.preventDefault();
+        const companyNameSCM = document.querySelector('#name-scm').MaterialTextfield.input_.value;
+        const latitudeSCM = document.querySelector('#latitude-scm').MaterialTextfield.input_.value || null;
+        const longitudeSCM = document.querySelector('#longitude-scm').MaterialTextfield.input_.value || null;
+
+        const companyNameCOYPU = document.querySelector('#name-coypu').MaterialTextfield.input_.value;
+        const latitudeCOYPU = document.querySelector('#latitude-coypu').MaterialTextfield.input_.value || null;
+        const longitudeCOYPU = document.querySelector('#longitude-coypu').MaterialTextfield.input_.value || null;
+
+        const reqMatch = JSON.stringify({
+            matcher: isChatGpt() ? 'chat-gpt' : 'ditto',
+            country: countrySelector.value,
+            companyA: {
+                name: companyNameSCM,
+                lat: latitudeSCM != null ? +latitudeSCM : null,
+                long: longitudeSCM != null ? +longitudeSCM : null,
+            },
+            companyB: {
+                name: companyNameCOYPU,
+                lat: latitudeCOYPU != null ? +latitudeCOYPU : null,
+                long: longitudeCOYPU != null ? +longitudeCOYPU : null,
+            },
+        });
+
+        loadingOverlay.classList.add('show');
+        result.innerText = '';
+        confidenceScore.innerText = '';
+        result.classList.remove('matched', 'not-matched');
+        confidenceBar.classList.remove('good', 'medium', 'bad');
+        match.classList.remove('show');
+
+        fetch('/match', { method: 'POST', body: reqMatch })
+            .then(res => {
+                if (res.status === 200) return res.json();
+                return null;
+            })
+            .then(res => {
+                loadingOverlay.classList.remove('show');
+
+                if (res == null) return;
+                if (isChatGpt() && res.match === 0) confidenceBar.MaterialProgress.setProgress(100 - res.match_confidence * 100);
+                else confidenceBar.MaterialProgress.setProgress(res.match_confidence * 100);
+
+                if (res.match_confidence > 0.9) confidenceBar.classList.add('good');
+                else if (res.match_confidence > 0.66) confidenceBar.classList.add('medium');
+                else confidenceBar.classList.add('bad');
+
+                result.innerText = res.match === 1 ? 'MATCHING' : 'NOT MATCHING';
+                result.classList.add(res.match === 1 ? 'matched' : 'not-matched');
+                if (isChatGpt() && res.match === 0) confidenceScore.innerText = 'Confidence: ' + (100 - res.match_confidence * 100).toFixed(3) + '%';
+                else confidenceScore.innerText = 'Confidence: ' + (res.match_confidence * 100).toFixed(3) + '%';
+
+                match.classList.add('show');
+            });
+    });
+
+    const imgMap = {
+        'US': 'us.png',
+        'DE': 'germany.png',
+        'CN': 'china.png',
+    };
+
+    const countryConfig = {
+        'US': {
+            latStart: 52.5,
+            longStart: -127,
+            latEnd: 23.6,
+            longEnd: -66.89,
+        },
+        'DE': {
+            latStart: 55.8,
+            longStart: 4.4,
+            latEnd: 47.1,
+            longEnd: 16.13,
+        },
+        'CN': {
+            latStart: 55.2,
+            longStart: 70.86,
+            latEnd: 18.30,
+            longEnd: 135.5,
+        },
+
+    };
+
+    function getLatLong(country, x, y) {
+        const cd = countryConfig[country];
+
+        return {
+            lat: +(cd.latEnd + (cd.latStart - cd.latEnd) * (1 - y)).toFixed(2),
+            long: +(cd.longEnd + (cd.longStart - cd.longEnd) * (1 - x)).toFixed(2),
+        }
+    }
+
+
+    const dialog = document.querySelector('dialog');
+    const showDialogButtonCOYPU = document.querySelector('#select-location-coypu');
+    const showDialogButtonSCM = document.querySelector('#select-location-scm');
+    const map = document.querySelector('#map');
+
+    let dataSelection;
+
+    if (!dialog.showModal) dialogPolyfill.registerDialog(dialog);
+
+    showDialogButtonCOYPU.addEventListener('click', () => {
+        dialog.showModal();
+        map.src = './maps/' + imgMap[countrySelector.value];
+        dataSelection = 'COYPU';
+    });
+
+    showDialogButtonSCM.addEventListener('click', () => {
+        dialog.showModal();
+        map.src = './maps/' + imgMap[countrySelector.value];
+        dataSelection = 'SCM';
+    });
+
+    map.addEventListener('click', ev => {
+        const x = ev.offsetX;
+        const y = ev.offsetY;
+        const width = ev.target.clientWidth;
+        const height = ev.target.clientHeight;
+        const { lat, long } = getLatLong(countrySelector.value, x / width, y / height);
+
+        if (dataSelection === 'COYPU') {
+            document.querySelector('#latitude-coypu').MaterialTextfield.change(lat);
+            document.querySelector('#longitude-coypu').MaterialTextfield.change(long);
+            dialog.close();
+            return;
+        }
+
+        document.querySelector('#latitude-scm').MaterialTextfield.change(lat);
+        document.querySelector('#longitude-scm').MaterialTextfield.change(long);
+        dialog.close();
+    });
+
+    dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+
+</script>
+
+</html>

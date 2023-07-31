@@ -1,0 +1,10 @@
+from neo4j desktop
+*Cypher
+
+MATCH (s:Supplier)-[:LOCATED_IN]-(c:Country)
+RETURN COUNT(s.name), c.iso2
+ORDER BY COUNT(s.name) DESC
+
+
+MATCH (s:Supplier)-[:LOCATED_IN]-(c:Country)
+RETURN s.name, c.iso2

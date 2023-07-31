@@ -1,0 +1,3 @@
+[submodule "blocking_ditto/sentence-transformers"]
+	path = blocking_ditto/sentence-transformers
+	url = https://github.com/UKPLab/sentence-transformers

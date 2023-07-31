@@ -1,0 +1,10 @@
+@prefix ns1: <neo4j://graph.schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<neo4j://graph.individuals/events#1> a ns1:SupplierEvent ;
+    ns1:HAS_EVENT <https://data.coypu.org/event/acled/DEU857> ;
+    ns1:supplier_id 279116 .
+
+<neo4j://graph.individuals/events#10> a ns1:SupplierEvent ;
+    ns1:HAS_EVENT <https://data.coypu.org/event/acled/DEU4649> ;
+    ns1:supplier_id 279116 .

@@ -1,0 +1,56 @@
+{
+    "distinct": [
+        [
+            {
+                "index": "9693",
+                "Company": "steel automotive gmbh (gro\u00dfbottwar)",
+                "Country": "de",
+                "Parsed_Company": "steel automotive",
+                "Location": "grossbottwar",
+                "Company_Category": "gmbh",
+                "long": "9.2930138",
+                "lat": "49.001316",
+                "lat_long": "49.0 9.3"
+            },
+            {
+                "company": "https://data.coypu.org/company/gleif/8945008pxtrmunsx2r27",
+                "Company": "stero gmbh & co. kg",
+                "Country": "de",
+                "city": "west",
+                "Parsed_Company": "stero",
+                "Location": "west",
+                "Company_Category": "gmbh",
+                "long": "-79.1166983",
+                "lat": "40.4203479",
+                "lat_long": "40.4 -79.1"
+            }
+        ]
+    ],
+    "match": [
+        [
+            {
+                "index": "7941",
+                "Company": "schneider gmbh (freiburg)",
+                "Country": "de",
+                "Parsed_Company": "schneider",
+                "Location": "freiburg",
+                "Company_Category": "gmbh",
+                "long": "7.8494005",
+                "lat": "47.9960901",
+                "lat_long": "48.0 7.8"
+            },
+            {
+                "company": "https://data.coypu.org/company/gleif/529900zslpasaqqy7q67",
+                "Company": "schneider & co. gmbh",
+                "Country": "de",
+                "city": "rostock",
+                "Parsed_Company": "schneider",
+                "Location": "rostock",
+                "Company_Category": "gmbh",
+                "long": "12.1286127",
+                "lat": "54.0924445",
+                "lat_long": "54.1 12.1"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,3 @@
+COL NAME VAL asmpt smt solutions COL CO_CATEGORY VAL nan	COL NAME VAL surgical solutions COL CO_CATEGORY VAL co	0
+COL NAME VAL pioneer michigan broach company COL CO_CATEGORY VAL co	COL NAME VAL bragg investment company COL CO_CATEGORY VAL co	0
+COL NAME VAL thermo fisher scientific COL CO_CATEGORY VAL nan	COL NAME VAL heartland COL CO_CATEGORY VAL nan	0

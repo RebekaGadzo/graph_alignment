@@ -1,0 +1,26 @@
+@prefix n4ind: <neo4j://graph.individuals#> .
+@prefix n4sch: <neo4j://graph.schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+n4ind:100000 a n4sch:BusinessPartner,
+        n4sch:Supplier ;
+    n4sch:LOCATED_IN n4ind:79800 ;
+    n4sch:bp_id "unknown" ;
+    n4sch:bp_name "Röchling Industrial Xanten GmbH" ;
+    n4sch:hasCity "Haren" ;
+    n4sch:hasCoypuLink "https://data.coypu.org/company/gleif/529900AI8CIRF6MFMC97" ;
+    n4sch:hasLei "529900AI8CIRF6MFMC97" ;
+    n4sch:name "Röchling Industrial Xanten GmbH" ;
+    n4sch:prewave_id "6100238" ;
+    n4sch:prewave_link "https://www.prewave.com/network/target/6100238" ;
+    n4sch:upper_name "RÖCHLING INDUSTRIAL XANTEN GMBH" .
+
+n4ind:100041 a n4sch:BusinessPartner,
+        n4sch:Supplier ;
+    n4sch:LOCATED_IN n4ind:79852 ;
+    n4sch:bp_id "unknown" ;
+    n4sch:bp_name "S.E.H. Malaysia Sdn. Bhd." ;
+    n4sch:name "S.E.H. Malaysia Sdn. Bhd." ;
+    n4sch:prewave_id "7435385" ;
+    n4sch:prewave_link "https://www.prewave.com/network/target/7435385" ;
+    n4sch:upper_name "S.E.H. MALAYSIA SDN. BHD." .

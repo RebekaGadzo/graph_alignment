@@ -1,0 +1,52 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX coy: <https://schema.coypu.org/global#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  ?event a <https://schema.coypu.org/global#Event> ;
+         <https://schema.coypu.org/global#hasCountryLocation> ?country ;
+         <https://schema.coypu.org/global#hasLatitude> ?lat ;
+         <https://schema.coypu.org/global#hasLongitude> ?long ;
+         <https://schema.coypu.org/global#hasTimestamp> ?timestamp ;
+         rdfs:label ?label ;
+         rdf:type ?type .
+  ?country <https://schema.coypu.org/global#hasIso2Code> ?iso .
+  ?type rdfs:label ?type_label .
+}
+WHERE {
+  ?event a <https://schema.coypu.org/global#Event> ;
+         <https://schema.coypu.org/global#hasCountryLocation> ?country ;
+         <https://schema.coypu.org/global#hasLatitude> ?lat ;
+         <https://schema.coypu.org/global#hasLongitude> ?long ;
+         <https://schema.coypu.org/global#hasTimestamp> ?timestamp ;
+         rdfs:label ?label ;
+         rdf:type ?type .
+  ?country <https://schema.coypu.org/global#hasIso2Code> ?iso .
+  ?type rdfs:label ?type_label .
+  FILTER (?iso IN ("DE", "CN", "US"))
+}
+
+
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX coy: <https://schema.coypu.org/global#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+ ?company rdfs:label ?name ;
+    	  rdf:type ?type ;
+          coy:hasCountry ?country ;
+  		  coy:hasLeiCode ?lei ;
+      	  coy:hasCity ?city .
+}
+WHERE {
+ ?company a coy:Company ;
+          rdfs:label ?name ;
+          rdf:type ?type ;
+          coy:hasLeiCode ?lei ;
+          coy:hasCountry ?country .
+ OPTIONAL { ?company coy:hasCity ?city . }
+ FILTER (?country IN ("DE", "CN", "US"))
+}

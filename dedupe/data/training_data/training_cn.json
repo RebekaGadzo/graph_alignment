@@ -1,0 +1,56 @@
+{
+    "distinct": [
+        [
+            {
+                "index": "1882",
+                "Company": "hirata corporation",
+                "Country": "cn",
+                "Parsed_Company": "hirata",
+                "Location": null,
+                "Company_Category": "co",
+                "long": null,
+                "lat": null,
+                "lat_long": null
+            },
+            {
+                "company": "https://data.coypu.org/company/gleif/6556003029psd7ek3431",
+                "Company": "漳州高新区龙江禹泽供应链管理合伙企业（有限合伙）",
+                "Country": "cn",
+                "city": "漳州市",
+                "Parsed_Company": "zhangzhou high tech zone longjiang yuze supply chain management partnership (limited partnership)",
+                "Location": "zhangzhou",
+                "Company_Category": null,
+                "long": "117.6424895",
+                "lat": "24.5164639",
+                "lat_long": "24.5 117.6"
+            }
+        ]
+    ],
+    "match": [
+        [
+            {
+                "index": "3524",
+                "Company": "hunan quanxiang ceramics corp.,ltd.",
+                "Country": "cn",
+                "Parsed_Company": "hunan quanxiang ceramics",
+                "Location": null,
+                "Company_Category": "co",
+                "long": null,
+                "lat": null,
+                "lat_long": null
+            },
+            {
+                "company": "https://data.coypu.org/company/gleif/655600cy8dafh8vxj291",
+                "Company": "湖南泉湘陶瓷有限公司",
+                "Country": "cn",
+                "city": "株洲市",
+                "Parsed_Company": "hunan quanxiang ceramics",
+                "Location": "zhuzhou city",
+                "Company_Category": null,
+                "long": "113.1283685",
+                "lat": "27.830618",
+                "lat_long": "27.8 113.1"
+            }
+        ]
+    ]
+}

@@ -1,0 +1,27 @@
+Here you can find the queries used to update the graph in Neo4j desktop application.
+First install neosemantics plugin and insert following config line in the database settings in Neo4j:
+dbms.unmanaged_extension_classes=n10s.endpoint=/rdf
+
+To import generated graph in Turtle format use the following line with updated file path:
+call n10s.rdf.import.fetch( "file:///C:/Users/{user_name}/Desktop/graph_merge/supplier_events.ttl", "Turtle")
+
+
+Once the graph is loaded into the database, run the following queries:
+#form has supplier relation between supplier and supplierevent
+MATCH (node1:Supplier), (node2:ns0__SupplierEvent)
+WHERE ID(node1) = node2.ns0_supplier
+CREATE (node1)-[:HAS_SUPPLIER]->(node2)
+
+#establish relation between events and suppliers 
+MATCH (ev:ns1__Event)<-[:ns0__HAS_EVENT]-(se:ns0__SupplierEvent)<-[:HAS_SUPPLIER]-(s:Supplier)
+CREATE (s)-[:HAS_EVENT]->(ev)
+
+#suppliers properties expansion
+MATCH (n:Supplier), (m:ns0__Supplier)
+WHERE m.ns0__scm_id = toString(ID(n))
+SET n.longitude = m.ns0__hasLongitude,
+    n.latitude = m.ns0__hasLatitude,
+    n.lei = m.ns0__lei,
+    n.city = m.ns0__city,
+    n.coypu_link = m.ns0__HAS_COYPU
+

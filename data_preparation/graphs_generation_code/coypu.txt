@@ -1,0 +1,30 @@
+from skynet: https://skynet.coypu.org/#/dataset/coypu-internal/query
+*Sparql
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX coy: <https://schema.coypu.org/global#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT *
+WHERE {
+  ?company a <https://schema.coypu.org/global#Company> . 
+  ?company rdfs:label ?name .
+  ?company coy:hasCountry ?country .
+  FILTER(?country IN ("DE", "CN", "US"))
+} 
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX coy: <https://schema.coypu.org/global#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT *
+WHERE {
+  ?company a <https://schema.coypu.org/global#Company> . 
+  ?company rdfs:label ?name .
+  ?company coy:hasCountry ?country .
+  OPTIONAL{?company coy:hasCity ?city .}
+  FILTER(?country IN ("DE", "CN", "US"))
+}
+LIMIT 10000

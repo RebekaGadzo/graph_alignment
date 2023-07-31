@@ -1,0 +1,3 @@
+COL COMPANY VAL china yto group finance COL CITY VAL luoyang city COL CO_CATEGORY VAL nan COL LONG VAL 112.4477046 COL LAT VAL 34.6196539 
+COL COMPANY VAL leiyang state owned assets investment and operation group COL CITY VAL hengyang COL CO_CATEGORY VAL nan COL LONG VAL 112.5665703 COL LAT VAL 26.8971898 
+COL COMPANY VAL qingdao balance equipment machinery COL CITY VAL qingdao COL CO_CATEGORY VAL nan COL LONG VAL 120.3781372 COL LAT VAL 36.0638034 

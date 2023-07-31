@@ -1,0 +1,3 @@
+COL COMPANY VAL queens gate apartments urban renewal COL CITY VAL colts neck COL CO_CATEGORY VAL llc COL LONG VAL -74.1723652 COL LAT VAL 40.2876108 
+COL COMPANY VAL mountain pacific future world funds   emerging markets equity fund COL CITY VAL wilmington COL CO_CATEGORY VAL llc COL LONG VAL -75.546589 COL LAT VAL 39.7459468 
+COL COMPANY VAL vzw la acquisition group COL CITY VAL wilmington COL CO_CATEGORY VAL llc COL LONG VAL -75.546589 COL LAT VAL 39.7459468 

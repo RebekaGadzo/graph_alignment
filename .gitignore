@@ -1,0 +1,12 @@
+.env/
+blocking_ditto/sentence-transformers/
+input_block/
+train_datasets/
+checkpoints/
+checkpoints_ditto/
+model.pth/
+output_companies.jsonl
+output_companies_old.jsonl
+log.txt
+input/
+output/

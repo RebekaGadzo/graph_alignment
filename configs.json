@@ -1,0 +1,98 @@
+[
+  {
+    "name": "SCM-COYPU/FULL/DE",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/de/colval_training_de.txt",
+    "validset": "data_preparation/data/scm_coypu/de/colval_val_de.txt",
+    "testset": "data_preparation/data/scm_coypu/de/colval_test_de.txt"
+  },
+  {
+    "name": "SCM-COYPU/NO-LOC/DE",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/no_loc/de/colval_training_de.txt",
+    "validset": "data_preparation/data/scm_coypu/no_loc/de/colval_val_de.txt",
+    "testset": "data_preparation/data/scm_coypu/no_loc/de/colval_test_de.txt"
+  },
+  {
+    "name": "SCM-COYPU/UNPARSED/DE",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/unparsed/de/colval_training_de.txt",
+    "validset": "data_preparation/data/scm_coypu/unparsed/de/colval_val_de.txt",
+    "testset": "data_preparation/data/scm_coypu/unparsed/de/colval_test_de.txt"
+  },
+  {
+    "name": "SCM-COYPU/AL/DE",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/AL/de/colval_training_de.txt",
+    "validset": "data_preparation/data/scm_coypu/AL/de/colval_val_de.txt",
+    "testset": "data_preparation/data/scm_coypu/AL/de/colval_test_de.txt"
+  },
+  {
+    "name": "SCM-COYPU/FULL/US",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/us/training.txt",
+    "validset": "data_preparation/data/scm_coypu/us/val.txt",
+    "testset": "data_preparation/data/scm_coypu/us/test.txt"
+  },
+  {
+    "name": "SCM-COYPU/NO-LOC/US",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/us_no_loc/training.txt",
+    "validset": "data_preparation/data/scm_coypu/us_no_loc/val.txt",
+    "testset": "data_preparation/data/scm_coypu/us_no_loc/test.txt"
+  },
+  {
+    "name": "SCM-COYPU/UNPARSED/US",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/us_unparsed/training.txt",
+    "validset": "data_preparation/data/scm_coypu/us_unparsed/val.txt",
+    "testset": "data_preparation/data/scm_coypu/us_unparsed/test.txt"
+  },
+  {
+    "name": "SCM-COYPU/AL/US",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/AL/us/blocker_data_us_train.txt",
+    "validset": "data_preparation/data/scm_coypu/AL/us/blocker_data_us_val.txt",
+    "testset": "data_preparation/data/scm_coypu/AL/us/blocker_data_us_test.txt"
+  },
+  {
+    "name": "SCM-COYPU/FULL/CN",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/cn/training.txt",
+    "validset": "data_preparation/data/scm_coypu/cn/val.txt",
+    "testset": "data_preparation/data/scm_coypu/cn/test.txt"
+  },
+  {
+    "name": "SCM-COYPU/NO-LOC/CN",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/cn_no_loc/training.txt",
+    "validset": "data_preparation/data/scm_coypu/cn_no_loc/val.txt",
+    "testset": "data_preparation/data/scm_coypu/cn_no_loc/test.txt"
+  },
+  {
+    "name": "SCM-COYPU/UNPARSED/CN",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/cn_unparsed/training.txt",
+    "validset": "data_preparation/data/scm_coypu/cn_unparsed/val.txt",
+    "testset": "data_preparation/data/scm_coypu/cn_unparsed/test.txt"
+  },
+  {
+    "name": "SCM-COYPU/AL/CN",
+    "task_type": "classification",
+    "vocab": ["0", "1"],
+    "trainset": "data_preparation/data/scm_coypu/AL/cn/blocker_data_cn_train.txt",
+    "validset": "data_preparation/data/scm_coypu/AL/cn/blocker_data_cn_val.txt",
+    "testset": "data_preparation/data/scm_coypu/AL/cn/blocker_data_cn_test.txt"
+  }
+ ]

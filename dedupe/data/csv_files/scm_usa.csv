@@ -1,0 +1,4 @@
+index,Company,Country,Parsed_Company,Location,Company_Category,long,lat,lat_long
+24153,Medtronic plc (North Haven),US,medtronic plc,north haven,co,-72.3129721,41.0128704,41.0 -72.3
+24154,Broadcom Inc. (Minneapolis),US,broadcom,minneapolis,co,-93.2654692,44.9772995,45.0 -93.3
+24155,KMC (Port Washington),US,kmc,port washington,,-73.6958069,40.8257072,40.8 -73.7

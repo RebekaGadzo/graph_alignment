@@ -1,0 +1,51 @@
+{
+  "field_names": [
+    "Parsed_Company",
+    "Company_Category",
+    "lat_long"
+  ],
+  "field_definition": [
+    {
+      "field": "Parsed_Company",
+      "type": "String"
+    },
+    {
+      "field": "Company_Category",
+      "type": "Categorical",
+      "Has Missing": true,
+      "categories": [
+        "co",
+        "nan",
+        "kirche",
+        "stiftung",
+        "fund",
+        "ag",
+        "gbr",
+        "fonds",
+        "ev",
+        "bank",
+        "erbengemeinschaft",
+        "eg",
+        "management",
+        "investments",
+        "city",
+        "ek",
+        "church",
+        "institute",
+        "advisors",
+        "county",
+        "credit union"
+      ]
+    },
+    {
+      "field": "lat_long",
+      "type": "LatLong",
+      "Has Missing": true
+    }
+  ],
+  "output_file": "./dedupe2803/output_cn.csv",
+  "skip_training": false,
+  "training_file": "./dedupe2803/training_cn.json",
+  "sample_size": 50000,
+  "recall_weight": 2
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+<key id="lifecycle_stage" for="node" attr.name="lifecycle_stage"/>
+<key id="prewave_risk_score" for="node" attr.name="prewave_risk_score"/>
+<key id="description" for="node" attr.name="description"/>
+<key id="lifecycle_risk_grade" for="node" attr.name="lifecycle_risk_grade"/>
+<key id="datasheet_url" for="node" attr.name="datasheet_url"/>
+<key id="years_to_eol" for="node" attr.name="years_to_eol"/>
+<key id="upper_name" for="node" attr.name="upper_name"/>
+<key id="id" for="node" attr.name="id"/>
+<key id="nation_capEN" for="node" attr.name="nation_capEN"/>
+<key id="website" for="node" attr.name="website"/>
+<key id="ifa" for="node" attr.name="ifa"/>
+<key id="nation_en" for="node" attr.name="nation_en"/>
+<key id="prewave_link" for="node" attr.name="prewave_link"/>
+<key id="labels" for="node" attr.name="labels"/>
+<key id="nation_de" for="node" attr.name="nation_de"/>
+<key id="bp_name" for="node" attr.name="bp_name"/>
+<key id="bp_id" for="node" attr.name="bp_id"/>
+<key id="prewave_id" for="node" attr.name="prewave_id"/>
+<key id="name" for="node" attr.name="name"/>
+<key id="duns" for="node" attr.name="duns"/>
+<key id="risk" for="node" attr.name="risk"/>
+<key id="iso2" for="node" attr.name="iso2"/>
+<key id="partnumber" for="node" attr.name="partnumber"/>
+<key id="iso3" for="node" attr.name="iso3"/>
+<key id="tier" for="edge" attr.name="tier"/>
+<key id="edge_source" for="edge" attr.name="edge_source"/>
+<key id="share_percent" for="edge" attr.name="share_percent"/>
+<key id="substance_mass" for="edge" attr.name="substance_mass"/>
+<key id="hhi" for="edge" attr.name="hhi"/>
+<key id="label" for="edge" attr.name="label"/>
+<graph id="G" edgedefault="directed">
+<node id="n79720" labels=":Country"><data key="labels">:Country</data><data key="country_risk">unknown</data><data key="sustainability_risk">unknown</data><data key="nation_en">Åland Islands</data><data key="nation_de">Åland Islands</data><data key="iso3">ALA</data><data key="nation_capEN">ÅlAND ISLANDS</data><data key="iso2">AX</data></node>
+<node id="n79721" labels=":Country"><data key="labels">:Country</data><data key="country_risk">3.755</data><data key="sustainability_risk">1.607</data><data key="nation_de">Afghanistan</data><data key="nation_en">Afghanistan</data><data key="nation_capEN">AFGHANISTAN</data><data key="iso2">AF</data><data key="iso3">AFG</data></node>
+<node id="n79722" labels=":Country"><data key="labels">:Country</data><data key="country_risk">6.064</data><data key="sustainability_risk">4.786</data><data key="nation_de">Albanien</data><data key="nation_en">Albania</data><data key="nation_capEN">ALBANIA</data><data key="iso2">AL</data><data key="iso3">ALB</data></node>
+<node id="n79723" labels=":Country"><data key="labels">:Country</data><data key="country_risk">4.617</data><data key="sustainability_risk">3.608</data><data key="nation_de">Algerien</data><data key="nation_en">Algeria</data><data key="nation_capEN">ALGERIA</data><data key="iso2">DZ</data><data key="iso3">DZA</data></node>
+<node id="n79724" labels=":Country"><data key="labels">:Country</data><data key="country_risk">6.27</data><data key="sustainability_risk">6.482</data><data key="nation_de">Samoa</data><data key="nation_en">American Samoa</data><data key="nation_capEN">AMERICAN SAMOA</data><data key="iso2">AS</data><data key="iso3">ASM</data></node>

@@ -1,0 +1,3 @@
+COL NAME VAL Dong Guan Ym Cleaning Products Co. (Liaobu)	COL NAME VAL 中山市开元皮具制品有限公司	0
+COL NAME VAL Zhejiang Luoshi Vibration Control Co., Ltd. (Shanghai)	COL NAME VAL NELES FLOW CONTROL (SHANGHAI) CO. LTD	0
+COL NAME VAL Honler Tech (Hongkong) Co., Ltd. (Longgang)	COL NAME VAL 蘇州高新股份（香港）有限公司	0

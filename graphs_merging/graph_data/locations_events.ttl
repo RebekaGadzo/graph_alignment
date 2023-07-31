@@ -1,0 +1,8 @@
+<https://data.coypu.org/event/acled/USA37838> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.coypu.org/global#Conflict> .
+<https://data.coypu.org/event/acled/USA37838> <http://www.w3.org/2000/01/rdf-schema#label> "Peaceful protest in Redding, United States"@en .
+<https://data.coypu.org/event/acled/USA37838> <https://schema.coypu.org/global#hasTimestamp> "2021-12-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://data.coypu.org/event/acled/USA37838> <https://schema.coypu.org/global#hasLongitude> "-122.3904e0"^^<http://www.w3.org/2001/XMLSchema#double> .
+<https://data.coypu.org/event/acled/USA37838> <https://schema.coypu.org/global#hasLatitude> "40.5855e0"^^<http://www.w3.org/2001/XMLSchema#double> .
+<https://data.coypu.org/event/acled/USA37838> <https://schema.coypu.org/global#hasCountryLocation> <https://data.coypu.org/country/USA> .
+<https://data.coypu.org/event/acled/USA37838> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.coypu.org/global#Event> .
+<https://data.coypu.org/event/acled/DEU11927> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.coypu.org/global#Conflict> .
